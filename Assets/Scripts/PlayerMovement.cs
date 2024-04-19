@@ -2,40 +2,61 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Speed of movement
-    public float rotationSpeed = 10f; // Speed of rotation
+    [Header("References")]
+    public Rigidbody rb;
+    public Transform head;
+    public Camera camera;
 
-    private Rigidbody rb;
-    private Vector3 movement;
+    [Header("Configurations")]
+    public float walkSpeed = 5f; 
+    public float runSpeed = 10f; 
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
-        // Input for movement
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-
-        // Calculate movement direction based on the input
-        movement = new Vector3(horizontalInput, 0f, verticalInput).normalized;
-
-        // Rotate the player to face the direction of movement
-        if (movement != Vector3.zero)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(transform.TransformDirection(movement), Vector3.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-        }
+        // Horizontal Rotation
+        transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * 2f);   // Adjust the multiplier for different rotation speed
     }
 
     void FixedUpdate()
     {
-        // Move the player forward based on the input
-        if (movement.z > 0)
-        {
-            rb.MovePosition(rb.position + transform.forward * movement.magnitude * moveSpeed * Time.fixedDeltaTime);
-        }
+        Vector3 newVelocity = Vector3.up * rb.velocity.y;           // new Vector3(0f, rb.velocity.y, 0f)
+
+        float speed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
+        newVelocity.x = Input.GetAxis("Horizontal") * speed;
+        newVelocity.z = Input.GetAxis("Vertical") * speed;
+
+        rb.velocity = transform.TransformDirection(newVelocity);
+    }
+
+    void LateUpdate()
+    {
+        // Vertical Rotation
+        Vector3 verticalRotator = head.eulerAngles;
+        verticalRotator.x -= Input.GetAxis("Mouse Y") * 2f;                  //  Edit the multiplier to adjust the rotate speed
+        verticalRotator.x = RestrictAngle(verticalRotator.x, -65f, 65f);    //  This is clamped to 85 degrees
+        head.eulerAngles = verticalRotator;
+    }
+
+
+    //  Clamp the vertical head rotation (prevent bending backwards)
+    public static float RestrictAngle(float angle, float angleMin, float angleMax)
+    {
+        if (angle > 180)
+            angle -= 360;
+        else if (angle < -180)
+            angle += 360;
+
+        if (angle > angleMax)
+            angle = angleMax;
+        if (angle < angleMin)
+            angle = angleMin;
+
+        return angle;
     }
 }
