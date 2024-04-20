@@ -136,7 +136,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36131680}
   serializedVersion: 4
-  m_Mass: 1000000
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -153,7 +153,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &36131683
 BoxCollider:
@@ -189,7 +189,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87212531}
   serializedVersion: 4
-  m_Mass: 1000000
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -206,7 +206,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &87212534
 BoxCollider:
@@ -242,7 +242,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145901960}
   serializedVersion: 4
-  m_Mass: 1000000
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -259,7 +259,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &145901963
 BoxCollider:
@@ -428,6 +428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PW_stove (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
+      propertyPath: m_TagString
+      value: Stove
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -504,7 +508,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376414788}
   serializedVersion: 4
-  m_Mass: 1000000
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -521,7 +525,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &376414791
 BoxCollider:
@@ -646,7 +650,6 @@ GameObject:
   m_Component:
   - component: {fileID: 465986095}
   - component: {fileID: 465986094}
-  - component: {fileID: 465986096}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -668,14 +671,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodPrefabs:
   - {fileID: 839233260410868668, guid: d6846055e97b9ac42a6e11a3ea4f1237, type: 3}
-  - {fileID: 919132149155446097, guid: 29ef3ff1d277f3b4b8a14099c9a4228c, type: 3}
-  - {fileID: 919132149155446097, guid: 746c02984a7be0f408ca4e19ebccf4a6, type: 3}
+  - {fileID: 8202614754564459210, guid: 10ab30527b9bc8a4995e798ac0706a37, type: 3}
   - {fileID: 279354611227255268, guid: e883ef9085352484c9e3e76351515178, type: 3}
-  - {fileID: 919132149155446097, guid: 641cdc7defe0c224c829fc6011434e39, type: 3}
-  - {fileID: 919132149155446097, guid: 032cb3a30c14499429e11dfce40295bf, type: 3}
+  - {fileID: 3388152910422019967, guid: e46a842bf3694a84cadd43bb62ba0348, type: 3}
   spawnInterval: 0.5
-  spawnRangeMin: {x: -10, y: 0.5, z: 5}
-  spawnRangeMax: {x: 10, y: 0.5, z: 5}
+  spawnRangeMin: {x: -10, y: 1, z: 5}
+  spawnRangeMax: {x: 10, y: 1, z: 5}
   moveSpeed: 5
 --- !u!4 &465986095
 Transform:
@@ -692,18 +693,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &465986096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465986093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0108918aa471558459c789baa5532959, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &681219745 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
@@ -717,7 +706,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681219745}
   serializedVersion: 4
-  m_Mass: 1000000
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -734,7 +723,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &681219748
 BoxCollider:
@@ -864,7 +853,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727672510}
   serializedVersion: 4
-  m_Mass: 1000000
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -881,7 +870,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &727672513
 BoxCollider:
@@ -915,6 +904,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_Name
       value: PW_stove (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
+      propertyPath: m_TagString
+      value: Stove
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_LocalScale.x
@@ -1124,6 +1117,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_Name
       value: PW_stove (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
+      propertyPath: m_TagString
+      value: Stove
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_LocalScale.x
@@ -1413,6 +1410,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PW_stove (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
+      propertyPath: m_TagString
+      value: Stove
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -1487,6 +1488,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_Name
       value: PW_stove (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
+      propertyPath: m_TagString
+      value: Stove
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_LocalScale.x
@@ -1866,7 +1871,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!4 &1179424415 stripped
 Transform:
@@ -1937,6 +1942,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_Name
       value: PW_stove (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
+      propertyPath: m_TagString
+      value: Stove
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_LocalScale.x
@@ -2012,6 +2021,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_Name
       value: PW_stove
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
+      propertyPath: m_TagString
+      value: Stove
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_LocalScale.x
@@ -2223,7 +2236,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481696784}
   serializedVersion: 4
-  m_Mass: 1000000
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2240,7 +2253,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &1481696787
 BoxCollider:
@@ -2276,7 +2289,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552918529}
   serializedVersion: 4
-  m_Mass: 1000000
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2293,7 +2306,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &1552918532
 BoxCollider:
@@ -2327,6 +2340,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_Name
       value: PW_stove (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
+      propertyPath: m_TagString
+      value: Stove
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_LocalScale.x
@@ -2538,7 +2555,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760853137}
   serializedVersion: 4
-  m_Mass: 1000000
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2555,7 +2572,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &1760853140
 BoxCollider:
@@ -2589,6 +2606,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_Name
       value: PW_stove (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
+      propertyPath: m_TagString
+      value: Stove
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9f0519225c65144c0b637b15dda857c8, type: 3}
       propertyPath: m_LocalScale.x
