@@ -835,8 +835,8 @@ MonoBehaviour:
   - {fileID: 279354611227255268, guid: e883ef9085352484c9e3e76351515178, type: 3}
   - {fileID: 3388152910422019967, guid: e46a842bf3694a84cadd43bb62ba0348, type: 3}
   spawnInterval: 0.5
-  spawnRangeMin: {x: -10, y: 1, z: 5}
-  spawnRangeMax: {x: 10, y: 1, z: 5}
+  spawnRangeMin: {x: -10, y: 2, z: 5}
+  spawnRangeMax: {x: 10, y: 2, z: 5}
   moveSpeed: 5
 --- !u!4 &465986095
 Transform:
@@ -847,7 +847,7 @@ Transform:
   m_GameObject: {fileID: 465986093}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1664,7 +1664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1782702501690864755, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
       propertyPath: m_Name
-      value: HumanMale_Character_FREE
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1782702501690864755, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
       propertyPath: m_TagString
@@ -1697,6 +1697,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1782702501690864755, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1179424419}
+    - targetCorrespondingSourceObject: {fileID: 1782702501690864755, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1179424420}
   m_SourcePrefab: {fileID: 100100000, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
 --- !u!1001 &983330361
 PrefabInstance:
@@ -2221,6 +2224,22 @@ MonoBehaviour:
   tomatoCount: 0
   steakCount: 0
   mushroomCount: 0
+  burgerCount: 0
+--- !u!114 &1179424420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179424409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf8da9bbaa0fe842b7cdf2917d77763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burgerPrefab: {fileID: 1765995492758009968, guid: cff631b005b811944a846f281776d825, type: 3}
+  burgerSpeed: 15
+  burgerSizeMultiplier: 15
 --- !u!1 &1239496520
 GameObject:
   m_ObjectHideFlags: 0
