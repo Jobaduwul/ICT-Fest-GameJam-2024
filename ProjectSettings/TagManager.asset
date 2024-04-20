@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Stove
   - Ingredient
+  - Wall
   layers:
   - Default
   - TransparentFX

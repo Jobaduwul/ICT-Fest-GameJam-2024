@@ -10,15 +10,15 @@ public class FoodCollision : MonoBehaviour
     {
         void Update()
         {
-            // Check if the food prefab's Z-coordinate is less than or equal to -15
-            if (transform.position.z <= -15f)
+            // Check if the food prefab's Z-coordinate is less than or equal to -14
+            if (transform.position.z <= -14f)
             {
                 Destroy(gameObject); // Destroy the food prefab
             }
         }
 
         // Check if the collision is with an object tagged as "Stove" or "Player"
-        if (collision.gameObject.CompareTag("Stove") || collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Stove") || collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Wall"))
         {
             // Notify the SpawnManager that this food object is destroyed
             if (OnFoodDestroyed != null)
