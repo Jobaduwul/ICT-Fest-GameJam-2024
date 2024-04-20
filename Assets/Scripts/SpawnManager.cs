@@ -41,6 +41,12 @@ public class SpawnManager : MonoBehaviour
         // Spawn the food item at the random spawn position
         GameObject newFood = Instantiate(foodPrefab, spawnPosition, Quaternion.identity);
 
+        // Enlarge the spawned food item by 5 times
+        newFood.transform.localScale *= 5f;
+
+        // Add colliders to the spawned food item if they're not already present
+        Collider foodCollider = newFood.GetComponent<Collider>();
+
         // Ensure the spawned food item has a Rigidbody component
         Rigidbody foodRigidbody = newFood.GetComponent<Rigidbody>();
         if (foodRigidbody == null)
