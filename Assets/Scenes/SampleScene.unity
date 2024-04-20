@@ -1331,7 +1331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1438546959266459337, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1438546959266459337, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1897,8 +1897,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.888889, z: 0.11111111}
-  m_Center: {x: 0, y: 0.8888889, z: 0}
+  m_Size: {x: 1, y: 2.1293657, z: 0.4539848}
+  m_Center: {x: 0, y: 0.7686504, z: -0.0010076099}
 --- !u!1 &1239496520
 GameObject:
   m_ObjectHideFlags: 0
