@@ -16,7 +16,6 @@ public class StoveHealth : MonoBehaviour
         {
             // Decrement stove's current lives
             currentLives--;
-            HeartManager.stoveCount--;
 
             Debug.Log("Stove hit by food. Current lives: " + currentLives);
 
@@ -25,6 +24,7 @@ public class StoveHealth : MonoBehaviour
             {
                 // Destroy the stove object
                 Debug.Log("Stove destroyed.");
+                HeartManager.stoveCount--;
                 Destroy(gameObject);
 
                 // Notify GameManager that a stove is destroyed
