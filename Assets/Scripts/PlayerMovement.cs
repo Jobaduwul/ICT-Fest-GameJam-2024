@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     public Rigidbody rb;
     public Transform head;
-    public Camera camera;
+    public new Camera camera;
 
     [Header("Configurations")]
     public float walkSpeed = 5f; 
@@ -19,8 +19,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Horizontal Rotation
-        transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * 2f);   // Adjust the multiplier for different rotation speed
+        if (!PauseMenu.Paused)
+        {
+            // Horizontal Rotation
+            transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * 2f);       // multiplier present
+        }
     }
 
     void FixedUpdate()
@@ -36,11 +39,14 @@ public class PlayerMovement : MonoBehaviour
 
     void LateUpdate()
     {
-        // Vertical Rotation
-        Vector3 verticalRotator = head.eulerAngles;
-        verticalRotator.x -= Input.GetAxis("Mouse Y") * 2f;                  //  Edit the multiplier to adjust the rotate speed
-        verticalRotator.x = RestrictAngle(verticalRotator.x, -65f, 65f);    //  This is clamped to 85 degrees
-        head.eulerAngles = verticalRotator;
+        if (!PauseMenu.Paused) 
+        {
+            // Vertical Rotation
+            Vector3 verticalRotator = head.eulerAngles;
+            verticalRotator.x -= Input.GetAxis("Mouse Y") * 2f;                   //  Edit the multiplier to adjust the rotate speed
+            verticalRotator.x = RestrictAngle(verticalRotator.x, -65f, 65f);    //  This is clamped to 65 degrees
+            head.eulerAngles = verticalRotator;
+        }
     }
 
 
