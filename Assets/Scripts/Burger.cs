@@ -17,7 +17,19 @@ public class Burger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Boss") || collision.gameObject.CompareTag("Stove") || collision.gameObject.CompareTag("Wall"))
         {
-            Destroy(gameObject); // Destroy the burger if collided with a Boss or Stove object
+            if (collision.gameObject.CompareTag("Boss"))
+            {
+                GameManager gameManager = FindObjectOfType<GameManager>();
+                if (gameManager != null)
+                {
+                    gameManager.BurgerHitBoss(); // Notify GameManager that a burger hit the boss
+                    Destroy(gameObject); // Destroy the burger if collided with a Boss or Stove object
+                }
+            }
+            else //if (collision.gameObject.CompareTag("Stove"))
+            {
+                Destroy(gameObject); // Destroy the burger if it collides with a stove
+            }
         }
     }
 }

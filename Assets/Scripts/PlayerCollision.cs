@@ -17,22 +17,22 @@ public class PlayerCollision : MonoBehaviour
         if (collidedPrefabName.Contains("Bread"))
         {
             breadCount++;
-            Debug.Log("Player collected Bread. Count: " + breadCount);
+            //Debug.Log("Player collected Bread. Count: " + breadCount);
         }
         else if (collidedPrefabName.Contains("Tomato"))
         {
             tomatoCount++;
-            Debug.Log("Player collected Tomato. Count: " + tomatoCount);
+            //Debug.Log("Player collected Tomato. Count: " + tomatoCount);
         }
         else if (collidedPrefabName.Contains("Steak"))
         {
             steakCount++;
-            Debug.Log("Player collected Steak. Count: " + steakCount);
+            //Debug.Log("Player collected Steak. Count: " + steakCount);
         }
         else if (collidedPrefabName.Contains("Mushroom"))
         {
             mushroomCount++;
-            Debug.Log("Player collected Mushroom. Count: " + mushroomCount);
+            //Debug.Log("Player collected Mushroom. Count: " + mushroomCount);
         }
         else if (collision.gameObject.CompareTag("Stove"))
         {
