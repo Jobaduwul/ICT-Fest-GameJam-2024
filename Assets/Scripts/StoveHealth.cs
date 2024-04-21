@@ -25,6 +25,13 @@ public class StoveHealth : MonoBehaviour
                 // Destroy the stove object
                 Debug.Log("Stove destroyed.");
                 Destroy(gameObject);
+
+                // Notify GameManager that a stove is destroyed
+                GameManager gameManager = FindObjectOfType<GameManager>();
+                if (gameManager != null)
+                {
+                    gameManager.StoveDestroyed(); // Notify GameManager that a stove is destroyed
+                }
             }
         }
     }

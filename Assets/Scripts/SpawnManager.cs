@@ -69,6 +69,6 @@ public class SpawnManager : MonoBehaviour
     void HandleFoodDestroyed(GameObject foodObject)
     {
         // Handle the destruction of the food object here (e.g., remove it from a list)
-        Debug.Log("Food destroyed: " + foodObject.name);
+        //Debug.Log("Food destroyed: " + foodObject.name);
     }
 }
