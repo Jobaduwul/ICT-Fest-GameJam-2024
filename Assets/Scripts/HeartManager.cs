@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthManager : MonoBehaviour
+public class HeartManager : MonoBehaviour
 {
     public static int stoveCount = 5;
     public int maxStoveCount = 5;
@@ -15,17 +15,6 @@ public class HealthManager : MonoBehaviour
     public Sprite emptyHeart;
 
     private double percentage;
-
-    public HealthManager(int maxStoveCount, Image[] hearts, Sprite redHeart, Sprite greenHeart, Sprite yellowHeart, Sprite emptyHeart, double percentage)
-    {
-        this.maxStoveCount = maxStoveCount;
-        this.hearts = hearts;
-        this.redHeart = redHeart;
-        this.greenHeart = greenHeart;
-        this.yellowHeart = yellowHeart;
-        this.emptyHeart = emptyHeart;
-        this.percentage = percentage;
-    }
 
     private void Awake()
     {

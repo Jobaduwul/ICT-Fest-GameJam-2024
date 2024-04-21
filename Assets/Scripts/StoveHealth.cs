@@ -16,6 +16,7 @@ public class StoveHealth : MonoBehaviour
         {
             // Decrement stove's current lives
             currentLives--;
+            HeartManager.stoveCount--;
 
             Debug.Log("Stove hit by food. Current lives: " + currentLives);
 
