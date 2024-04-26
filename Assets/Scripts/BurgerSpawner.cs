@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class BurgerSpawner : MonoBehaviour
@@ -40,5 +41,6 @@ public class BurgerSpawner : MonoBehaviour
 
         // Decrement burger count
         GetComponent<PlayerCollision>().burgerCount--;
+        GetComponent<PlayerCollision>().burgerCountText.text = GetComponent<PlayerCollision>().burgerCount.ToString();
     }
 }
