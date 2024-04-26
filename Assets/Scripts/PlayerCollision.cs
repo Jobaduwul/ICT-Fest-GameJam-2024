@@ -18,6 +18,10 @@ public class PlayerCollision : MonoBehaviour
     public TextMeshProUGUI freezePotionText;
     public TextMeshProUGUI paralysePotionText;
 
+    public TextMeshProUGUI breadCountText;
+    public TextMeshProUGUI tomatoCountText;
+    public TextMeshProUGUI steakCountText;
+    public TextMeshProUGUI mushroomCountText;
     public TextMeshProUGUI burgerCountText;
 
     private bool isCollidingWithStove = false; // Flag to track stove collision
@@ -27,6 +31,10 @@ public class PlayerCollision : MonoBehaviour
     {
         UpdatePotionText();
         burgerCountText.text = burgerCount.ToString("0");
+        breadCountText.text = breadCount.ToString("0");
+        tomatoCountText.text = tomatoCount.ToString("0");
+        steakCountText.text = steakCount.ToString("0");
+        mushroomCountText.text = mushroomCount.ToString("0");
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -35,21 +43,25 @@ public class PlayerCollision : MonoBehaviour
         if (collidedPrefabName.Contains("Bread"))
         {
             breadCount++;
+            breadCountText.text = breadCount.ToString();
             //Debug.Log("Player collected Bread. Count: " + breadCount);
         }
         else if (collidedPrefabName.Contains("Tomato"))
         {
             tomatoCount++;
+            tomatoCountText.text = tomatoCount.ToString();
             //Debug.Log("Player collected Tomato. Count: " + tomatoCount);
         }
         else if (collidedPrefabName.Contains("Steak"))
         {
             steakCount++;
+            steakCountText.text=steakCount.ToString();
             //Debug.Log("Player collected Steak. Count: " + steakCount);
         }
         else if (collidedPrefabName.Contains("Mushroom"))
         {
             mushroomCount++;
+            mushroomCountText.text=mushroomCount.ToString();
             //Debug.Log("Player collected Mushroom. Count: " + mushroomCount);
         }
         else if (collision.gameObject.CompareTag("Stove"))
@@ -157,6 +169,11 @@ public class PlayerCollision : MonoBehaviour
         tomatoCount--;
         steakCount--;
         mushroomCount--;
+
+        breadCountText.text = breadCount.ToString();
+        tomatoCountText.text = tomatoCount.ToString();
+        steakCountText.text = steakCount.ToString();
+        mushroomCountText.text = mushroomCount.ToString();
 
         // Ensure the counts don't go below zero
         breadCount = Mathf.Max(breadCount, 0);
