@@ -1,6 +1,5 @@
-using UnityEngine;
-using Unity.UI;
 using TMPro;
+using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
@@ -10,9 +9,8 @@ public class PlayerCollision : MonoBehaviour
     public int mushroomCount = 0;
     public int burgerCount = 0;
 
-    public TextMeshProUGUI burgerCountText;
-
     private bool isCollidingWithStove = false; // Flag to track stove collision
+    public TextMeshProUGUI stovePromptText; // Reference to the TextMeshPro Text element for stove prompt
 
     void OnCollisionEnter(Collision collision)
     {
@@ -41,6 +39,7 @@ public class PlayerCollision : MonoBehaviour
         else if (collision.gameObject.CompareTag("Stove"))
         {
             isCollidingWithStove = true; // Set flag to true when colliding with a stove
+            ShowStovePrompt();
         }
     }
 
@@ -49,13 +48,29 @@ public class PlayerCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Stove"))
         {
             isCollidingWithStove = false; // Set flag to false when exiting stove collision
+            HideStovePrompt();
+        }
+    }
+
+    void ShowStovePrompt()
+    {
+        if (stovePromptText != null)
+        {
+            stovePromptText.gameObject.SetActive(true);
+            stovePromptText.text = "Press E to cook";
+        }
+    }
+
+    void HideStovePrompt()
+    {
+        if (stovePromptText != null)
+        {
+            stovePromptText.gameObject.SetActive(false);
         }
     }
 
     void Update()
     {
-        burgerCountText.text = burgerCount.ToString("0");
-
         // Check if player is colliding with a stove and meets burger preparation conditions
         if (isCollidingWithStove && Input.GetKeyDown(KeyCode.E) && CanPrepareBurger())
         {
@@ -71,7 +86,6 @@ public class PlayerCollision : MonoBehaviour
     void PrepareBurger()
     {
         burgerCount++;
-        burgerCountText.text = burgerCount.ToString();
         Debug.Log("Burger prepared. Count: " + burgerCount);
 
         // Decrement the counts of bread, tomato, steak, and mushroom
