@@ -45,7 +45,7 @@ public class HeartManager : MonoBehaviour
             stoveHealth = stoveHealthScript.currentLives;
             UpdateHearts();
         }
-        Debug.Log("In heart manager:" + stoveHealth);
+        //Debug.Log("In heart manager:" + stoveHealth);
         //by default everything is empty heart
         //foreach (GameObject heart in hearts)
         //{
