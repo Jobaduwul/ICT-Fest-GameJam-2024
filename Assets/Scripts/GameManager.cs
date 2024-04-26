@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI stoveCountText;
 
-    // public Text gameOverText;
-    // public Text victoryText;
+    public Text gameOverText;
+    public Text victoryText;
 
     private bool isGameOver = false;
     private bool isVictory = false;
@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         UpdateBossHealthUI();
-        //gameOverText.gameObject.SetActive(false);
-        //victoryText.gameObject.SetActive(false);
+        gameOverText.gameObject.SetActive(false);
+        victoryText.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -67,13 +67,13 @@ public class GameManager : MonoBehaviour
     void HandleGameOver()
     {
         Debug.Log("Game Over!");
-        //gameOverText.gameObject.SetActive(true);
+        gameOverText.gameObject.SetActive(true);
     }
 
     void HandleVictory()
     {
         Debug.Log("Victory!");
-        //victoryText.gameObject.SetActive(true);
+        victoryText.gameObject.SetActive(true);
         Destroy(bossObject); // Destroy the boss object
     }
 }
