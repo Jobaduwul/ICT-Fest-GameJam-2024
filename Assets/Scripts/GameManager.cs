@@ -21,11 +21,12 @@ public class GameManager : MonoBehaviour
         UpdateBossHealthUI();
         gameOverText.gameObject.SetActive(false);
         victoryText.gameObject.SetActive(false);
+        stoveCountText.text = stoveCount.ToString("5");
     }
 
     private void Update()
     {
-        stoveCountText.text = stoveCount.ToString("5");
+        stoveCountText.text = stoveCount.ToString();
     }
 
     public void BurgerHitBoss()
