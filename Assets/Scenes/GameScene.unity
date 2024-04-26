@@ -1678,6 +1678,7 @@ MonoBehaviour:
   - {fileID: 8202614754564459210, guid: 10ab30527b9bc8a4995e798ac0706a37, type: 3}
   - {fileID: 279354611227255268, guid: e883ef9085352484c9e3e76351515178, type: 3}
   - {fileID: 3388152910422019967, guid: e46a842bf3694a84cadd43bb62ba0348, type: 3}
+  - {fileID: 839233260410868668, guid: d6846055e97b9ac42a6e11a3ea4f1237, type: 3}
   spawnInterval: 0.5
   spawnRangeMin: {x: -10, y: 2, z: 5}
   spawnRangeMax: {x: 10, y: 2, z: 5}
@@ -5027,7 +5028,8 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1179424420}
   m_SourcePrefab: {fileID: 100100000, guid: 60770bdb4dc667c45bea53db0339dc05, type: 3}
---- !u!1 &977513403
+--- !u!1 &982830445
+
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5035,6 +5037,14 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+
+  - component: {fileID: 982830446}
+  - component: {fileID: 982830448}
+  - component: {fileID: 982830447}
+  m_Layer: 5
+  m_Name: ParalysePotionCountText
+  m_TagString: Untagged
+  
   - component: {fileID: 977513404}
   - component: {fileID: 977513408}
   - component: {fileID: 977513407}
@@ -5043,31 +5053,127 @@ GameObject:
   m_Layer: 0
   m_Name: Plane (18)
   m_TagString: Plane
+
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &977513404
-Transform:
+
+--- !u!224 &982830446
+RectTransform:
+
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977513403}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.9, y: 0, z: 38.1}
+
+  m_GameObject: {fileID: 982830445}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 664641656}
+  m_Father: {fileID: 1608271295}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &977513405
-BoxCollider:
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 100, y: -398.75}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &982830447
+MonoBehaviour:
+
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
+  m_GameObject: {fileID: 982830445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -426.5172, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &982830448
+CanvasRenderer:
+
   m_GameObject: {fileID: 977513403}
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -5154,12 +5260,15 @@ MeshRenderer:
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &977513408
 MeshFilter:
+
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977513403}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+
+  m_GameObject: {fileID: 982830445}
+  m_CullTransparentMesh: 1
+
 --- !u!1001 &983330361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6153,8 +6262,10 @@ MonoBehaviour:
   burgerCount: 0
   ragePotionCount: 0
   freezePotionCount: 0
+  paralysePotionCount: 0
   ragePotionText: {fileID: 492638302}
   freezePotionText: {fileID: 2066603100}
+  paralysePotionText: {fileID: 982830447}
   burgerCountText: {fileID: 1880745239}
   stovePromptText: {fileID: 818291459}
 --- !u!114 &1179424420
@@ -7858,6 +7969,7 @@ RectTransform:
   - {fileID: 475414656}
   - {fileID: 2066603099}
   - {fileID: 492638301}
+  - {fileID: 982830446}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8071,7 +8183,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1662890747
+
+--- !u!114 &1650594330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650594329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d7ccca567d944c4ba5f2cfeccfc28ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potionPrefabs:
+  - {fileID: 674160181754180382, guid: cc4c2e7668748ed4b92fbd6f83f85875, type: 3}
+  - {fileID: 4364390325722768244, guid: d4950713f2f8b2548a5476efb8a64b6d, type: 3}
+  - {fileID: 236248613840056532, guid: 42874f8313a22454ba05d0e8b4db9797, type: 3}
+  spawnArea: {fileID: 0}
+  spawnHeight: 4
+  spawnInterval: 0.5
+  spawnDuration: 3
+  spawnCooldown: 10
+  countdownText: {fileID: 475414654}
+--- !u!4 &1650594331
+
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
