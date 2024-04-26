@@ -10,6 +10,14 @@ public class PlayerCollision : MonoBehaviour
     public int mushroomCount = 0;
     public int burgerCount = 0;
 
+    public int ragePotionCount = 0;
+    public int freezePotionCount = 0;
+    public int paralysePotionCount = 0;
+
+    public TextMeshProUGUI ragePotionText;
+    public TextMeshProUGUI freezePotionText;
+    public TextMeshProUGUI paralysePotionText;
+
     public TextMeshProUGUI burgerCountText;
 
     private bool isCollidingWithStove = false; // Flag to track stove collision
@@ -44,6 +52,40 @@ public class PlayerCollision : MonoBehaviour
             isCollidingWithStove = true; // Set flag to true when colliding with a stove
             ShowStovePrompt();
         }
+
+        if (collidedPrefabName.Contains("RagePotion"))
+        {
+            // Increment rage potion count
+            ragePotionCount++;
+
+            // Destroy the collided potion
+            Destroy(collision.gameObject);
+
+            // Update UI text
+            UpdatePotionText();
+        }
+        else if (collidedPrefabName.Contains("FreezePotion"))
+        {
+            // Increment freeze potion count
+            freezePotionCount++;
+
+            // Destroy the collided potion
+            Destroy(collision.gameObject);
+
+            // Update UI text
+            UpdatePotionText();
+        }
+        else if (collidedPrefabName.Contains("ParalysePotion"))
+        {
+            // Increment paralyse potion count
+            paralysePotionCount++;
+
+            // Destroy the collided potion
+            Destroy(collision.gameObject);
+
+            // Update UI text
+            UpdatePotionText();
+        }
     }
 
     void OnCollisionExit(Collision collision)
@@ -71,6 +113,18 @@ public class PlayerCollision : MonoBehaviour
         {
             stovePromptText.gameObject.SetActive(false);
         }
+    }
+
+    public void UpdatePotionText()
+    {
+        // Update UI text for rage potion count
+        ragePotionText.text = "Rage Potions: " + ragePotionCount;
+
+        // Update UI text for freeze potion count
+        freezePotionText.text = "Freeze Potions: " + freezePotionCount;
+
+        // Update UI text for paralyse potion count
+        paralysePotionText.text = "Paralyse Potions: " + paralysePotionCount;
     }
 
     void Update()
