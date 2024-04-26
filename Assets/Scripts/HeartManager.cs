@@ -7,38 +7,19 @@ using UnityEngine.UI;
 
 public class HeartManager : MonoBehaviour
 {
-    public int stoveHealth = 3;
-    public int maxStoveHealth = 3;
-    public GameObject heart1;
-    public GameObject heart2;
-    public GameObject heart3;
+    public Slider slider;
 
-    public GameObject stove;
-    private StoveHealth stoveHealthScript;
-    //public GameObject redHeart;
-    //public Sprite greenHeart;
-    //public Sprite yellowHeart;
-    //public Sprite emptyHeart;
-
-    private double percentage;
-
-    private void Awake()
+    public void SetMaxHealth(int health)
     {
-        stoveHealthScript = stove.GetComponent<StoveHealth>();
-        if (stoveHealthScript != null)
-        {
-            maxStoveHealth = stoveHealthScript.maxLives; // Set maxStoveHealth
-            UpdateHearts(); // Update hearts based on current health
-        }
-        else
-        {
-            Debug.LogError("StoveHealth script not found on stove object.");
-        }
+        slider.maxValue = health;
+        slider.value = health;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetHealth(int health)
     {
+<<<<<<< HEAD
+        slider.value = health;
+=======
         // Check if stove health script is assigned and update hearts accordingly
         if (stoveHealthScript != null)
         {
@@ -93,5 +74,6 @@ public class HeartManager : MonoBehaviour
             heart2.SetActive(false);
             heart3.SetActive(false);
         }
+>>>>>>> ed69dfcbdbfe81fbb70086f2db15f8a0fbc692e8
     }
 }
