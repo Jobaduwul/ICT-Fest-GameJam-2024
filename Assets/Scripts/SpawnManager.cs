@@ -4,8 +4,8 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] foodPrefabs; // Array of food prefabs to spawn
     public float spawnInterval; // Time interval between spawns
-    public Vector3 spawnRangeMin = new Vector3(-10f, 0.5f, 3f); // Minimum spawn position
-    public Vector3 spawnRangeMax = new Vector3(10f, 0.5f, 3f); // Maximum spawn position
+    public Vector3 spawnRangeMin; // Minimum spawn position
+    public Vector3 spawnRangeMax; // Maximum spawn position
     public float moveSpeed; // Speed of movement in negative y-axis direction
 
     private float nextSpawnTime;
