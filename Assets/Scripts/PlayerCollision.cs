@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using Unity.UI;
 
 public class PlayerCollision : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerCollision : MonoBehaviour
     public int steakCount = 0;
     public int mushroomCount = 0;
     public int burgerCount = 0;
+
+    public TextMeshProUGUI burgerCountText;
 
     private bool isCollidingWithStove = false; // Flag to track stove collision
     public TextMeshProUGUI stovePromptText; // Reference to the TextMeshPro Text element for stove prompt
@@ -63,6 +66,7 @@ public class PlayerCollision : MonoBehaviour
 
     void HideStovePrompt()
     {
+        burgerCountText.text = burgerCount.ToString("0");
         if (stovePromptText != null)
         {
             stovePromptText.gameObject.SetActive(false);
@@ -86,6 +90,7 @@ public class PlayerCollision : MonoBehaviour
     void PrepareBurger()
     {
         burgerCount++;
+        burgerCountText.text = burgerCount.ToString();
         Debug.Log("Burger prepared. Count: " + burgerCount);
 
         // Decrement the counts of bread, tomato, steak, and mushroom
