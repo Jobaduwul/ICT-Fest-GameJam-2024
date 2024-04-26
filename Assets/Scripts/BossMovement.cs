@@ -10,8 +10,11 @@ public class BossMovement : MonoBehaviour
     public bool moveRight;
     public float timer, timerBetweenSwitches;
 
+    Rigidbody rb;
+
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         timer = timerBetweenSwitches;
     }
 
@@ -26,7 +29,8 @@ public class BossMovement : MonoBehaviour
         {
             if(timer>0)
             {
-                transform.Translate(Vector3.right * Time.deltaTime * speed);
+                // transform.Translate(Vector3.right * Time.deltaTime * speed);
+                rb.MovePosition(transform.position + Vector3.right * Time.deltaTime * speed);
             }
 
             else
@@ -40,7 +44,8 @@ public class BossMovement : MonoBehaviour
         {
             if (timer > 0)
             {
-                transform.Translate(Vector3.left * Time.deltaTime * speed);
+                // transform.Translate(Vector3.left * Time.deltaTime * speed);
+                rb.MovePosition(transform.position + Vector3.left * Time.deltaTime * speed);
             }
 
             else
@@ -49,6 +54,8 @@ public class BossMovement : MonoBehaviour
                 timer = timerBetweenSwitches;
             }
         }
+
+        transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
 
     }
 }
