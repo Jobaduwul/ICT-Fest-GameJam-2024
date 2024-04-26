@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Boss
   - Plane
+  - SpawnManager
   layers:
   - Default
   - TransparentFX
