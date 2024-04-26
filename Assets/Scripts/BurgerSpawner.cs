@@ -8,13 +8,16 @@ public class BurgerSpawner : MonoBehaviour
 
     void Update()
     {
-        // Check if left mouse button is clicked
-        if (Input.GetMouseButtonDown(0))
+        if ( !PauseMenu.Paused )
         {
-            // Check if burger count is at least 1
-            if (GetComponent<PlayerCollision>().burgerCount >= 1)
+            // Check if left mouse button is clicked
+            if (Input.GetMouseButtonDown(0))
             {
-                SpawnBurger();
+                // Check if burger count is at least 1
+                if (GetComponent<PlayerCollision>().burgerCount >= 1)
+                {
+                    SpawnBurger();
+                }
             }
         }
     }

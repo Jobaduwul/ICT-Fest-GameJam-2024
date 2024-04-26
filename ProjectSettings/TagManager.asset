@@ -8,6 +8,7 @@ TagManager:
   - Ingredient
   - Wall
   - Boss
+  - Plane
   layers:
   - Default
   - TransparentFX
