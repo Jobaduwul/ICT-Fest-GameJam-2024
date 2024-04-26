@@ -74,7 +74,7 @@ public class PotionSpawner : MonoBehaviour
 
         // Randomly generate spawn position within spawnArea
         float spawnX = Random.Range(-12, 12);
-        float spawnZ = Random.Range(-10, 5);
+        float spawnZ = Random.Range(-5, 5);
         Vector3 spawnPosition = new Vector3(spawnX, spawnHeight, spawnZ);
 
         // Instantiate the potion prefab at the spawn position
