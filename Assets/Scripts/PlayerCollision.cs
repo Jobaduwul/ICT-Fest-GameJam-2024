@@ -23,6 +23,11 @@ public class PlayerCollision : MonoBehaviour
     private bool isCollidingWithStove = false; // Flag to track stove collision
     public TextMeshProUGUI stovePromptText; // Reference to the TextMeshPro Text element for stove prompt
 
+    private void Awake()
+    {
+        UpdatePotionText();
+        burgerCountText.text = burgerCount.ToString("0");
+    }
     void OnCollisionEnter(Collision collision)
     {
         string collidedPrefabName = collision.gameObject.name;
@@ -118,13 +123,13 @@ public class PlayerCollision : MonoBehaviour
     public void UpdatePotionText()
     {
         // Update UI text for rage potion count
-        ragePotionText.text = "Rage Potions: " + ragePotionCount;
+        ragePotionText.text = ragePotionCount.ToString();
 
         // Update UI text for freeze potion count
-        freezePotionText.text = "Freeze Potions: " + freezePotionCount;
+        freezePotionText.text = freezePotionCount.ToString();
 
         // Update UI text for paralyse potion count
-        paralysePotionText.text = "Paralyse Potions: " + paralysePotionCount;
+        paralysePotionText.text = paralysePotionCount.ToString();
     }
 
     void Update()
