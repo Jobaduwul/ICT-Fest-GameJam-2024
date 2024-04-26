@@ -3,7 +3,7 @@ using UnityEngine;
 public class StoveHealth : MonoBehaviour
 {
     public int maxLives; // Maximum number of lives for the stove
-    private int currentLives; // Current number of lives for the stove
+    public int currentLives; // Current number of lives for the stove
 
     void Start()
     {
@@ -24,6 +24,7 @@ public class StoveHealth : MonoBehaviour
             {
                 // Destroy the stove object
                 Debug.Log("Stove destroyed.");
+    
                 Destroy(gameObject);
 
                 // Notify GameManager that a stove is destroyed
@@ -34,5 +35,10 @@ public class StoveHealth : MonoBehaviour
                 }
             }
         }
+    }
+
+    int getCurrentLives()
+    {
+        return currentLives;
     }
 }

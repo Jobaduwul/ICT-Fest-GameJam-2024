@@ -7,6 +7,8 @@ TagManager:
   - Stove
   - Ingredient
   - Wall
+  - Boss
+  - Plane
   layers:
   - Default
   - TransparentFX

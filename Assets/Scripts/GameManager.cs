@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,8 +8,10 @@ public class GameManager : MonoBehaviour
     public int bossHealth;
     public int stoveCount;
 
-    // public Text gameOverText;
-    // public Text victoryText;
+    public TextMeshProUGUI stoveCountText;
+
+    public Text gameOverText;
+    public Text victoryText;
 
     private bool isGameOver = false;
     private bool isVictory = false;
@@ -16,8 +19,13 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         UpdateBossHealthUI();
-        //gameOverText.gameObject.SetActive(false);
-        //victoryText.gameObject.SetActive(false);
+        gameOverText.gameObject.SetActive(false);
+        victoryText.gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        stoveCountText.text = stoveCount.ToString("5");
     }
 
     public void BurgerHitBoss()
@@ -40,6 +48,7 @@ public class GameManager : MonoBehaviour
         if (!isGameOver && !isVictory)
         {
             stoveCount--;
+            stoveCountText.text = stoveCount.ToString();
 
             if (stoveCount <= 0 && GetComponent<PlayerCollision>().burgerCount <= 0 && bossHealth > 0)
             {
@@ -58,13 +67,13 @@ public class GameManager : MonoBehaviour
     void HandleGameOver()
     {
         Debug.Log("Game Over!");
-        //gameOverText.gameObject.SetActive(true);
+        gameOverText.gameObject.SetActive(true);
     }
 
     void HandleVictory()
     {
         Debug.Log("Victory!");
-        //victoryText.gameObject.SetActive(true);
+        victoryText.gameObject.SetActive(true);
         Destroy(bossObject); // Destroy the boss object
     }
 }
