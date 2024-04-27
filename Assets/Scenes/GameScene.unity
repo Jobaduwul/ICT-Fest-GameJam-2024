@@ -27188,7 +27188,7 @@ MonoBehaviour:
   tomatoCount: 0
   steakCount: 0
   mushroomCount: 0
-  burgerCount: 20
+  burgerCount: 0
   ragePotionCount: 0
   freezePotionCount: 0
   paralysePotionCount: 0
