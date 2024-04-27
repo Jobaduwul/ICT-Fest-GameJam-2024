@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scroll Test.unity
     guid: babbfcb2078118a4b8de9ca28515f6d5
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 3e877d3ff601d2448a90ed1c3c32b7d2
   m_configObjects: {}
