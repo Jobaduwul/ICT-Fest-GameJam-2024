@@ -23,18 +23,16 @@ public class Burger : MonoBehaviour
             if (gameManager != null)
             {
                 gameManager.BurgerHitBoss(); // Notify GameManager that a burger hit the boss
-
-                // Play sound effect for burger hitting boss
-                soundManager.PlayChefHitSound();
             }
             Destroy(gameObject); // Destroy the burger if collided with the boss
+            // Play sound effect for burger hitting boss
+            soundManager.PlayChefHitSound();
         }
         else if (collision.gameObject.CompareTag("Stove") || collision.gameObject.CompareTag("Wall"))
         {
+            Destroy(gameObject); // Destroy the burger if it collides with a stove or wall
             // Play sound effect for burger hitting stove or wall
             soundManager.PlayStoveDestroySound();
-
-            Destroy(gameObject); // Destroy the burger if it collides with a stove or wall
         }
     }
 }

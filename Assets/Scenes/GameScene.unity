@@ -24271,6 +24271,12 @@ MonoBehaviour:
   chefHitSoundClip: {fileID: 8300000, guid: 0ebdc627fad3b024f859b7e849f274ab, type: 3}
   stoveDestroySoundClip: {fileID: 8300000, guid: 39fc0a5d20f42b74ead14f61ab1dae4d, type: 3}
   gameOverSoundClip: {fileID: 0}
+  collectSoundSource: {fileID: 419338532}
+  potionCollectSoundSource: {fileID: 419338532}
+  burgerPrepareSoundSource: {fileID: 419338532}
+  chefHitSoundSource: {fileID: 419338532}
+  stoveDestroySoundSource: {fileID: 419338532}
+  gameOverSoundSource: {fileID: 419338532}
 --- !u!1 &790806222
 GameObject:
   m_ObjectHideFlags: 0
@@ -25942,7 +25948,7 @@ MonoBehaviour:
   bossHealth: 3
   stoveCount: 5
   stoveCountText: {fileID: 1495276718}
-  soundManager: {fileID: 0}
+  soundManager: {fileID: 769082850}
 --- !u!4 &1015357091
 Transform:
   m_ObjectHideFlags: 0
@@ -27194,7 +27200,7 @@ MonoBehaviour:
   steakCountText: {fileID: 1186253160}
   mushroomCountText: {fileID: 928117778}
   burgerCountText: {fileID: 1870389251}
-  soundManager: {fileID: 0}
+  soundManager: {fileID: 769082850}
   stovePromptText: {fileID: 818291459}
 --- !u!114 &1179424420
 MonoBehaviour:

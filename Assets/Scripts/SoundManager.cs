@@ -12,12 +12,12 @@ public class SoundManager : MonoBehaviour
     public AudioClip gameOverSoundClip; // Sound for game over
 
     // Reference to the AudioSource components
-    private AudioSource collectSoundSource;
-    private AudioSource potionCollectSoundSource;
-    private AudioSource burgerPrepareSoundSource;
-    private AudioSource chefHitSoundSource;
-    private AudioSource stoveDestroySoundSource;
-    private AudioSource gameOverSoundSource;
+    public AudioSource collectSoundSource;
+    public AudioSource potionCollectSoundSource;
+    public AudioSource burgerPrepareSoundSource;
+    public AudioSource chefHitSoundSource;
+    public AudioSource stoveDestroySoundSource;
+    public AudioSource gameOverSoundSource;
 
     void Awake()
     {
