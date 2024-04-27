@@ -13,13 +13,13 @@ public class FreezePotionEffect : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        /*if (Input.GetKeyDown(KeyCode.Z))
         {
             ActivateFreezeEffect();
-        }
+        }*/
     }
 
-    void ActivateFreezeEffect()
+    public void ActivateFreezeEffectOnce()
     {
         // Disable circular motion script on this stove
         CircularMovement circularMotion = GetComponent<CircularMovement>();
@@ -53,6 +53,44 @@ public class FreezePotionEffect : MonoBehaviour
             }
         }
     }
+
+
+    public void ActivateFreezeEffectTwice()
+    {
+        // Disable circular motion script on this stove
+        CircularMovement circularMotion = GetComponent<CircularMovement>();
+        if (circularMotion != null)
+        {
+            circularMotion.enabled = false;
+            Invoke("EnableCircularMotion", freezeDuration);
+        }
+
+        // Freeze all position and rotation axes
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
+        if (rigidbody != null)
+        {
+            rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+            Invoke("UnfreezePosition", freezeDuration);
+        }
+
+        // Decrement freeze potion count
+        GameObject playerObject = GameObject.FindWithTag("Player");
+        if (playerObject != null)
+        {
+            PlayerCollision playerCollision = playerObject.GetComponent<PlayerCollision>();
+            if (playerCollision != null)
+            {
+                playerCollision.freezePotionCount -= 2;
+                if (playerCollision.freezePotionCount < 0)
+                {
+                    playerCollision.freezePotionCount = 1;
+                }
+                playerCollision.UpdatePotionText();
+            }
+        }
+    }
+
+
 
     void EnableCircularMotion()
     {

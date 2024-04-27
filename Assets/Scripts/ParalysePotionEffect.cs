@@ -33,7 +33,7 @@ public class ParalysePotionEffect : MonoBehaviour
         }
     }
 
-    bool CanUseParalysePotion()
+    public bool CanUseParalysePotion()
     {
         // Find the Player object and get its PlayerCollision component
         GameObject playerObject = GameObject.FindWithTag("Player");
@@ -51,7 +51,7 @@ public class ParalysePotionEffect : MonoBehaviour
         return true;
     }
 
-    void ActivateParalyseEffect()
+    public void ActivateParalyseEffect()
     {
         // Disable BossMovement script for the boss object
         if (bossMovement != null)

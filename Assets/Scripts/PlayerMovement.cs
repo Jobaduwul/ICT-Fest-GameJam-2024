@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (!PauseMenu.Paused)
+        if (!PauseMenu.Paused  || SlowTime.TimeSlowed)
         {
             // Horizontal Rotation
             transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * 2f);       // multiplier present
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     void LateUpdate()
     {
-        if (!PauseMenu.Paused) 
+        if (!PauseMenu.Paused  || SlowTime.TimeSlowed) 
         {
             // Vertical Rotation
             Vector3 verticalRotator = head.eulerAngles;
