@@ -75,6 +75,10 @@ public class ParalysePotionEffect : MonoBehaviour
             if (playerCollision != null)
             {
                 playerCollision.paralysePotionCount--;
+                if (playerCollision.paralysePotionCount < 0)
+                {
+                    playerCollision.paralysePotionCount = 0;
+                }
                 playerCollision.UpdatePotionText();
             }
         }

@@ -22038,7 +22038,67 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 420911894}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1015357093}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyFreezeAndParalyseCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357097}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyFreezeAndParalyseCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357096}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyFreezeAndParalyseCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357095}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyFreezeAndParalyseCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357094}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyFreezeAndParalyseCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &420911894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27605,6 +27665,11 @@ GameObject:
   - component: {fileID: 1015357091}
   - component: {fileID: 1015357090}
   - component: {fileID: 1015357092}
+  - component: {fileID: 1015357093}
+  - component: {fileID: 1015357097}
+  - component: {fileID: 1015357096}
+  - component: {fileID: 1015357095}
+  - component: {fileID: 1015357094}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -27657,6 +27722,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenuObject: {fileID: 675860019}
+--- !u!114 &1015357093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015357089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49749f841912cb7489765769b97053b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ragePotionEffect: {fileID: 1179424422}
+  paralysePotionEffect: {fileID: 465986096}
+  freezePotionEffect: {fileID: 681219754}
+--- !u!114 &1015357094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015357089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49749f841912cb7489765769b97053b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ragePotionEffect: {fileID: 1179424422}
+  paralysePotionEffect: {fileID: 0}
+  freezePotionEffect: {fileID: 1760853146}
+--- !u!114 &1015357095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015357089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49749f841912cb7489765769b97053b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ragePotionEffect: {fileID: 1179424422}
+  paralysePotionEffect: {fileID: 0}
+  freezePotionEffect: {fileID: 36131689}
+--- !u!114 &1015357096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015357089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49749f841912cb7489765769b97053b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ragePotionEffect: {fileID: 1179424422}
+  paralysePotionEffect: {fileID: 0}
+  freezePotionEffect: {fileID: 1552918538}
+--- !u!114 &1015357097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015357089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49749f841912cb7489765769b97053b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ragePotionEffect: {fileID: 1179424422}
+  paralysePotionEffect: {fileID: 1461824844}
+  freezePotionEffect: {fileID: 145901969}
 --- !u!1 &1034824766
 GameObject:
   m_ObjectHideFlags: 0
@@ -28909,7 +29049,67 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1106084417}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1015357093}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyFreezeAndRageCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357097}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyFreezeAndRageCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357096}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyFreezeAndRageCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357095}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyFreezeAndRageCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357094}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyFreezeAndRageCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1106084417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29297,7 +29497,67 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1121697623}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1015357093}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyRageAndParalyseCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357097}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyRageAndParalyseCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357096}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyRageAndParalyseCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357095}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyRageAndParalyseCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357094}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyRageAndParalyseCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1121697623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48614,7 +48874,67 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1732156157}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1015357093}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyFreezeAndRageCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357097}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyFreezeAndRageCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357096}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyFreezeAndRageCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357095}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyFreezeAndRageCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1015357094}
+        m_TargetAssemblyTypeName: PotionCombos, Assembly-CSharp
+        m_MethodName: ApplyFreezeAndRageCombo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1732156157
 MonoBehaviour:
   m_ObjectHideFlags: 0

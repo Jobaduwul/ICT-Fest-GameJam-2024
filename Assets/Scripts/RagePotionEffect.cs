@@ -40,7 +40,7 @@ public class RagePotionEffect : MonoBehaviour
         return false;
     }
 
-    void ActivateRageEffect()
+    public void ActivateRageEffect()
     {
         // Set the rage effect as active
         isEffectActive = true;
@@ -58,6 +58,10 @@ public class RagePotionEffect : MonoBehaviour
         if (playerCollision != null)
         {
             playerCollision.ragePotionCount--;
+            if (playerCollision.ragePotionCount < 0)
+            {
+                playerCollision.ragePotionCount = 0;
+            }
             playerCollision.UpdatePotionText();
         }
 
