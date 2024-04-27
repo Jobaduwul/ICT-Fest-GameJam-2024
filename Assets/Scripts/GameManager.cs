@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -68,7 +69,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Over!");
         //gameOverText.gameObject.SetActive(true);
         // Play sound effect for game over
-        soundManager.PlayGameOverSound();
+        // soundManager.PlayGameOverSound();
+        SceneManager.LoadScene(2);
+
     }
 
     void HandleVictory()
@@ -76,5 +79,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Victory!");
         //victoryText.gameObject.SetActive(true);
         Destroy(bossObject); // Destroy the boss object
+        SceneManager.LoadScene(3);
+
     }
 }
