@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
         if (!isGameOver && !isVictory)
         {
             stoveCount--;
+            stoveCountText.text = stoveCount.ToString();
 
             if (stoveCount <= 0)
             {
