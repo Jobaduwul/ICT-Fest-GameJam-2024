@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime;
@@ -26,19 +25,15 @@ public class SlowTime : MonoBehaviour
 
     void Update()
     {
-        if(!PauseMenu.Paused)
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (Input.GetKeyDown(KeyCode.Tab))
-            {
-                StartSlowMotion();
-            }
-
-            if (Input.GetKeyUp(KeyCode.Tab))
-            {
-                StopSlowMotion();
-            }
+            StartSlowMotion();
         }
-        
+
+        if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            StopSlowMotion();
+        }
     }
 
     public void StartSlowMotion()

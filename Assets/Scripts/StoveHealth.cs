@@ -20,7 +20,7 @@ public class StoveHealth : MonoBehaviour
             Debug.Log("Stove hit by food. Current lives: " + currentLives);
 
             // Check if stove's lives reach 0
-            if (currentLives == 0)
+            if (currentLives <= 0)
             {
                 // Destroy the stove object
                 Debug.Log("Stove destroyed.");
