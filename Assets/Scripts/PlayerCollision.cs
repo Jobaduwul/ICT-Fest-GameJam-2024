@@ -24,6 +24,8 @@ public class PlayerCollision : MonoBehaviour
     public TextMeshProUGUI mushroomCountText;
     public TextMeshProUGUI burgerCountText;
 
+    public SoundManager soundManager; // Reference to the SoundManager script
+
     private bool isCollidingWithStove = false; // Flag to track stove collision
     public TextMeshProUGUI stovePromptText; // Reference to the TextMeshPro Text element for stove prompt
 
@@ -44,24 +46,28 @@ public class PlayerCollision : MonoBehaviour
         {
             breadCount++;
             breadCountText.text = breadCount.ToString();
+            soundManager.PlayCollectSound();
             //Debug.Log("Player collected Bread. Count: " + breadCount);
         }
         else if (collidedPrefabName.Contains("Tomato"))
         {
             tomatoCount++;
             tomatoCountText.text = tomatoCount.ToString();
+            soundManager.PlayCollectSound();
             //Debug.Log("Player collected Tomato. Count: " + tomatoCount);
         }
         else if (collidedPrefabName.Contains("Steak"))
         {
             steakCount++;
             steakCountText.text=steakCount.ToString();
+            soundManager.PlayCollectSound();
             //Debug.Log("Player collected Steak. Count: " + steakCount);
         }
         else if (collidedPrefabName.Contains("Mushroom"))
         {
             mushroomCount++;
             mushroomCountText.text=mushroomCount.ToString();
+            soundManager.PlayCollectSound();
             //Debug.Log("Player collected Mushroom. Count: " + mushroomCount);
         }
         else if (collision.gameObject.CompareTag("Stove"))
@@ -75,6 +81,9 @@ public class PlayerCollision : MonoBehaviour
             // Increment rage potion count
             ragePotionCount++;
 
+            // Play sound effect for potion collection
+            //soundManager.PlayPotionSound();
+
             // Destroy the collided potion
             Destroy(collision.gameObject);
 
@@ -86,6 +95,9 @@ public class PlayerCollision : MonoBehaviour
             // Increment freeze potion count
             freezePotionCount++;
 
+            // Play sound effect for potion collection
+            //soundManager.PlayPotionSound();
+
             // Destroy the collided potion
             Destroy(collision.gameObject);
 
@@ -96,6 +108,9 @@ public class PlayerCollision : MonoBehaviour
         {
             // Increment paralyse potion count
             paralysePotionCount++;
+
+            // Play sound effect for potion collection
+            //soundManager.PlayPotionSound();
 
             // Destroy the collided potion
             Destroy(collision.gameObject);

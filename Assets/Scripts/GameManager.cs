@@ -1,32 +1,34 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject bossObject;
-    public int bossHealth;
+    public int bossHealth = 3;
     public int stoveCount;
 
     public TextMeshProUGUI stoveCountText;
+    //public TextMeshProUGUI gameOverText;
+    //public TextMeshProUGUI victoryText;
 
-    public Text gameOverText;
-    public Text victoryText;
-
+    //private int bossHealth;
     private bool isGameOver = false;
     private bool isVictory = false;
+
+    public SoundManager soundManager; // Reference to the SoundManager script
 
     void Start()
     {
         UpdateBossHealthUI();
-        gameOverText.gameObject.SetActive(false);
-        victoryText.gameObject.SetActive(false);
-        stoveCountText.text = stoveCount.ToString("5");
+        //gameOverText.gameObject.SetActive(false);
+        //victoryText.gameObject.SetActive(false);
+        stoveCountText.text = stoveCount.ToString();
     }
 
-    private void Update()
+    void UpdateBossHealthUI()
     {
-        stoveCountText.text = stoveCount.ToString();
+        // Update UI to display current boss health
+        Debug.Log("Boss Health: " + bossHealth);
     }
 
     public void BurgerHitBoss()
@@ -51,7 +53,7 @@ public class GameManager : MonoBehaviour
             stoveCount--;
             stoveCountText.text = stoveCount.ToString();
 
-            if (stoveCount <= 0 && GetComponent<PlayerCollision>().burgerCount <= 0 && bossHealth > 0)
+            if (stoveCount <= 0 && FindObjectOfType<Burger>() == null && bossHealth > 0)
             {
                 isGameOver = true;
                 HandleGameOver();
@@ -59,22 +61,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void UpdateBossHealthUI()
-    {
-        // Update UI to display current boss health
-        Debug.Log("Boss Health: " + bossHealth);
-    }
-
     void HandleGameOver()
     {
         Debug.Log("Game Over!");
-        gameOverText.gameObject.SetActive(true);
+        //gameOverText.gameObject.SetActive(true);
+        // Play sound effect for game over
+        soundManager.PlayGameOverSound();
     }
 
     void HandleVictory()
     {
         Debug.Log("Victory!");
-        victoryText.gameObject.SetActive(true);
+        //victoryText.gameObject.SetActive(true);
         Destroy(bossObject); // Destroy the boss object
     }
 }
