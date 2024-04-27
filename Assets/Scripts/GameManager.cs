@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         UpdateBossHealthUI();
         //gameOverText.gameObject.SetActive(false);
         //victoryText.gameObject.SetActive(false);
-        stoveCountText.text = stoveCount.ToString();
+        stoveCountText.text = stoveCount.ToString("5");
     }
 
     void UpdateBossHealthUI()
@@ -53,7 +53,12 @@ public class GameManager : MonoBehaviour
         if (!isGameOver && !isVictory)
         {
             stoveCount--;
-            stoveCountText.text = stoveCount.ToString();
+
+            if (stoveCount <= 0)
+            {
+                stoveCountText.text = stoveCount.ToString("0");
+            }
+           
 
             if (stoveCount <= 0 && FindObjectOfType<Burger>() == null && bossHealth > 0)
             {
