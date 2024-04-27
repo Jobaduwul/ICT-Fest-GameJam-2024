@@ -81,42 +81,42 @@ public class PlayerCollision : MonoBehaviour
             // Increment rage potion count
             ragePotionCount++;
 
-            // Play sound effect for potion collection
-            //soundManager.PlayPotionSound();
-
             // Destroy the collided potion
             Destroy(collision.gameObject);
 
             // Update UI text
             UpdatePotionText();
+
+            // Play sound effect for potion collection
+            soundManager.PlayPotionSound();
         }
         else if (collidedPrefabName.Contains("FreezePotion"))
         {
             // Increment freeze potion count
             freezePotionCount++;
 
-            // Play sound effect for potion collection
-            //soundManager.PlayPotionSound();
-
             // Destroy the collided potion
             Destroy(collision.gameObject);
 
             // Update UI text
             UpdatePotionText();
+
+            // Play sound effect for potion collection
+            soundManager.PlayPotionSound();
         }
         else if (collidedPrefabName.Contains("ParalysePotion"))
         {
             // Increment paralyse potion count
             paralysePotionCount++;
 
-            // Play sound effect for potion collection
-            //soundManager.PlayPotionSound();
-
             // Destroy the collided potion
             Destroy(collision.gameObject);
 
             // Update UI text
             UpdatePotionText();
+
+            // Play sound effect for potion collection
+            soundManager.PlayPotionSound();
         }
     }
 
@@ -195,5 +195,7 @@ public class PlayerCollision : MonoBehaviour
         tomatoCount = Mathf.Max(tomatoCount, 0);
         steakCount = Mathf.Max(steakCount, 0);
         mushroomCount = Mathf.Max(mushroomCount, 0);
+
+        soundManager.PlayBurgerPrepareSound();
     }
 }

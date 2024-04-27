@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
                 HandleVictory();
             }
         }
+        soundManager.PlayChefHitSound();
     }
 
     public void StoveDestroyed()
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
                 isGameOver = true;
                 HandleGameOver();
             }
+            soundManager.PlayStoveDestroySound();
         }
     }
 
