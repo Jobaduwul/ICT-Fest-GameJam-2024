@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     private bool isGameOver = false;
     private bool isVictory = false;
 
+    public SoundManager soundManager; // Reference to the SoundManager script
+
     void Start()
     {
         UpdateBossHealthUI();
@@ -63,6 +65,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Over!");
         //gameOverText.gameObject.SetActive(true);
+        // Play sound effect for game over
+        soundManager.PlayGameOverSound();
     }
 
     void HandleVictory()

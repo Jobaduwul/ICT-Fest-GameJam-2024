@@ -4998,6 +4998,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766297584}
   m_CullTransparentMesh: 1
+--- !u!1 &769082848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 769082849}
+  - component: {fileID: 769082850}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &769082849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769082848}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &769082850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769082848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36cf4a985db313d40824902034e09d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectSoundClip: {fileID: 8300000, guid: fca33544147bf3c4c898589dfb36a886, type: 3}
+  potionCollectSoundClip: {fileID: 8300000, guid: df716e4fcd774ec459edf2929a768926, type: 3}
+  burgerPrepareSoundClip: {fileID: 8300000, guid: bc01ae7e1af728b40896040737d42ebc, type: 3}
+  chefHitSoundClip: {fileID: 8300000, guid: 0ebdc627fad3b024f859b7e849f274ab, type: 3}
+  stoveDestroySoundClip: {fileID: 8300000, guid: 39fc0a5d20f42b74ead14f61ab1dae4d, type: 3}
+  gameOverSoundClip: {fileID: 0}
 --- !u!1 &790806222
 GameObject:
   m_ObjectHideFlags: 0
@@ -6665,6 +6715,7 @@ MonoBehaviour:
   bossHealth: 3
   stoveCount: 5
   stoveCountText: {fileID: 1495276718}
+  soundManager: {fileID: 0}
 --- !u!4 &1015357091
 Transform:
   m_ObjectHideFlags: 0
@@ -7825,6 +7876,7 @@ MonoBehaviour:
   steakCountText: {fileID: 1186253160}
   mushroomCountText: {fileID: 928117778}
   burgerCountText: {fileID: 1870389251}
+  soundManager: {fileID: 0}
   stovePromptText: {fileID: 818291459}
 --- !u!114 &1179424420
 MonoBehaviour:
@@ -13405,3 +13457,4 @@ SceneRoots:
   - {fileID: 1650594331}
   - {fileID: 879453610}
   - {fileID: 1362109967}
+  - {fileID: 769082849}
