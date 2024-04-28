@@ -33,31 +33,41 @@ public class SpawnManager : MonoBehaviour
         // Randomly select a food prefab from the array
         GameObject foodPrefab = foodPrefabs[Random.Range(0, foodPrefabs.Length)];
 
-        // Generate a random spawn position within the specified range
-        Vector3 spawnPosition = new Vector3(Random.Range(spawnRangeMin.x, spawnRangeMax.x),
-                                            Random.Range(spawnRangeMin.y, spawnRangeMax.y),
-                                            Random.Range(spawnRangeMin.z, spawnRangeMax.z));
+        // Find the boss object
+        GameObject boss = GameObject.FindGameObjectWithTag("Boss");
 
-        // Spawn the food item at the random spawn position
-        GameObject newFood = Instantiate(foodPrefab, spawnPosition, Quaternion.identity);
+        // Get the x-coordinate of the boss
+        float bossX = boss.transform.position.x;
 
-        // Enlarge the spawned food item by 5 times
-        newFood.transform.localScale *= 5f;
-
-        // Add colliders to the spawned food item if they're not already present
-        Collider foodCollider = newFood.GetComponent<Collider>();
-
-        // Ensure the spawned food item has a Rigidbody component
-        Rigidbody foodRigidbody = newFood.GetComponent<Rigidbody>();
-        if (foodRigidbody == null)
+        if(boss != null)
         {
-            foodRigidbody = newFood.AddComponent<Rigidbody>();
+            // Generate a random spawn position within the specified range
+            Vector3 spawnPosition = new Vector3(bossX,
+                                                Random.Range(spawnRangeMin.y, spawnRangeMax.y),
+                                                Random.Range(spawnRangeMin.z, spawnRangeMax.z));
+
+            // Spawn the food item at the random spawn position
+            GameObject newFood = Instantiate(foodPrefab, spawnPosition, Quaternion.identity);
+
+            // Enlarge the spawned food item by 5 times
+            newFood.transform.localScale *= 5f;
+
+            // Add colliders to the spawned food item if they're not already present
+            Collider foodCollider = newFood.GetComponent<Collider>();
+
+            // Ensure the spawned food item has a Rigidbody component
+            Rigidbody foodRigidbody = newFood.GetComponent<Rigidbody>();
+            if (foodRigidbody == null)
+            {
+                foodRigidbody = newFood.AddComponent<Rigidbody>();
+            }
+
+            foodRigidbody.useGravity = false;
+
+            // Move the spawned food item in the negative y-axis direction
+            foodRigidbody.velocity = Vector3.back * moveSpeed;
         }
 
-        foodRigidbody.useGravity = false;
-
-        // Move the spawned food item in the negative y-axis direction
-        foodRigidbody.velocity = Vector3.back * moveSpeed;
     }
 
     void OnDestroy()

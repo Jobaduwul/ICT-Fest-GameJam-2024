@@ -10,28 +10,28 @@ public class PotionCombos : MonoBehaviour
     {
         ragePotionEffect.ActivateRageEffect();
         freezePotionEffect.ActivateFreezeEffect();
-        freezePotionEffect.ActivateFreezeEffect();
+        //freezePotionEffect.ActivateFreezeEffect();
     }
 
     public void ApplyFreezeAndParalyseCombo()
     {
         freezePotionEffect.ActivateFreezeEffect();
         paralysePotionEffect.ActivateParalyseEffect();
-        paralysePotionEffect.ActivateParalyseEffect();
+        //paralysePotionEffect.ActivateParalyseEffect();
     }
 
     public void ApplyRageAndParalyseCombo()
     {
         ragePotionEffect.ActivateRageEffect();
         paralysePotionEffect.ActivateParalyseEffect();
-        paralysePotionEffect.ActivateParalyseEffect();
+        //paralysePotionEffect.ActivateParalyseEffect();
     }
 
     public void ApplyFreezeAndRageCombo()
     {
         freezePotionEffect.ActivateFreezeEffect();
         ragePotionEffect.ActivateRageEffect();
-        freezePotionEffect.ActivateFreezeEffect();
-        ragePotionEffect.ActivateRageEffect();
+        //freezePotionEffect.ActivateFreezeEffect();
+        //ragePotionEffect.ActivateRageEffect();
     }
 }

@@ -27690,7 +27690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossObject: {fileID: 1461824838}
-  bossHealth: 3
+  bossHealth: 5
   stoveCount: 5
   stoveCountText: {fileID: 1495276718}
   soundManager: {fileID: 769082850}
